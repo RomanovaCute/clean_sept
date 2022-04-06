@@ -1,0 +1,44 @@
+/* Необходимо указать padding'и - они для каждой кнопки свои */
+
+@mixin light-pinkButton {
+    display: inline-block;
+    background-color: $button_light-pink;
+    color: $text_dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+}
+
+@mixin dark-pinkButton {
+    display: inline-block;
+    position: relative;
+    background-color: $button_dark-pink;
+    color: $text_white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+
+    /* У этой кнопки есть элемент "капля", которая задается отдельно через ::after */
+}
+
+@mixin blueButton {
+    display: inline-block;
+    background-color: $button_blue;
+    color: $text_white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+}
+
+@mixin borderButton {
+    display: inline-block;
+    position: relative;
+    background-color: $white-color;
+    color: $text_dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+    border: 1.5px solid $dark-pink-color;
+
+    /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+}
