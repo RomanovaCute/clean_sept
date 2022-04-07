@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Цвета */
+/* Размеры шрифтов */
+/*42px*/
+/*25px*/
+/*15px*/
+/*Брейкпоинты медиазапроса*/
+/* Необходимо указать padding'и - они для каждой кнопки свои */
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  max-width: 1900px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header .container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header .container .container_line {
+  display: flex;
+  align-items: center;
+}
+
+.header .container .container_line .header__logo {
+  margin: 16.7px 234.93px 16.7px 143px;
+}
+
+.header .container .container_line .header__contacts {
+  margin-right: 54.98px;
+  font-size: 0.9375em;
+  align-items: center;
+}
+
+.header .container .container_line .header__contacts ul {
+  display: flex;
+}
+
+.header .container .container_line .header__contacts .contacts_e-mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header .container .container_line .header__contacts .contacts_phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 5px;
+}
+
+.header .container .container_line .header__contacts .contacts_phone .phone_number {
+  font-weight: bold;
+}
+
+.header .container .container_line .header__contacts .contacts_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22B5BF;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9375em;
+  position: relative;
+  width: 251.07px;
+  height: 54.36px;
+  color: white;
+}
+
+.header .container .container_line .header__contacts a {
+  text-decoration: none;
+  color: #323139;
+}
+
+.header .container .container_line .header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 150px;
+}
+
+.header ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (max-width: 376px) {
+  .header {
+    width: 100%;
+    height: 54px;
+    padding: 0;
+  }
+  .header .container {
+    width: 100%;
+  }
+  .header .container .container_line {
+    justify-content: space-between;
+  }
+  .header .container .container_line .header__logo {
+    margin: 0 25px;
+  }
+  .header .container .container_line .header__menu {
+    margin-right: 15px;
+  }
+  .header .header__contacts {
+    display: none;
+  }
+}
+
+.benefits {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.benefits__container {
+  max-width: 1140px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 150px;
+}
+
+.benefits__header {
+  display: block;
+  width: 65.5%;
+  font-size: 2.625em;
+  font: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+.benefits__header span {
+  color: #22B5BF;
+}
+
+.benefits__text_button {
+  display: block;
+  padding-top: 30px;
+  width: 65.5%;
+}
+
+.benefits__text {
+  font: "Roboto", sans-serif;
+  font-size: 14.5px;
+  text-align: left;
+}
+
+.benefits__text span {
+  font-weight: 600;
+}
+
+.benefits__button {
+  display: inline-block;
+  position: relative;
+  background-color: #FFFFFF;
+  color: #323139;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  border: 1.5px solid #E67187;
+  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  margin-top: 30px;
+  padding-top: 18px;
+  width: 255.74px;
+  height: 36.36px;
+  text-align: center;
+}
+
+.benefits__button a {
+  text-decoration: none;
+  color: #323139;
+}
+
+.benefits__pic {
+  background-image: url(/assets/images/benefits_rectangle_27.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 34.5%;
+  max-width: 260.56px;
+  max-height: 200px;
+  text-align: center;
+  margin-top: -0.73em;
+  margin-left: 34px;
+}
+
+.benefits__pic .benefits__pic_sanit {
+  max-height: 203.71px;
+  margin: 0 auto;
+  object-fit: scale-down;
+  object-position: center;
+}
+/*# sourceMappingURL=main.css.map */
