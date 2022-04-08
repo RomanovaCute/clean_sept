@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Цвета */
+/* Размеры шрифтов */
+/*42px*/
+/*25px*/
+/*15px*/
+/*Брейкпоинты медиазапроса*/
+/* Необходимо указать padding'и - они для каждой кнопки свои */
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.banner {
+  max-width: 100%;
+  height: 447px;
+  background-color: #F9F9F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.banner__leftside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 150px;
+}
+
+.banner__title {
+  font-size: 2.625em;
+}
+
+.banner__subtitle {
+  font-size: 1.5625em;
+}
+
+.blue-color {
+  color: #22B5BF;
+}
+
+.banner__button {
+  display: inline-block;
+  background-color: #F2B4BF;
+  color: #323139;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  width: 283px;
+  height: 54,36px;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
