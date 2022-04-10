@@ -10,14 +10,19 @@
     display: flex;
     flex-direction: column;
     padding-left: 150px;
+    
 }
 
 .banner__title {
 font-size: $title;
+font-weight: 700;
+padding-bottom: 30px;
 }
 
 .banner__subtitle {
     font-size: $subtitle;
+    font-weight: 400;
+    padding-bottom: 30px;
 }
 
 .blue-color {
@@ -25,8 +30,18 @@ font-size: $title;
 }
 
 .banner__button {
-    @include light-pinkButton;
-    width: 283px;
-    height: 54,36px;
-    text-align: center;
+    padding: 18px 50px;
+    @include borderButton;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.banner__button:after {
+    content: ""
+
+}
+
+.banner__button:active {
+    @include dark-pinkButton;
+    
 }

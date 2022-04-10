@@ -83,10 +83,14 @@ body {
 
 .banner__title {
   font-size: 2.625em;
+  font-weight: 700;
+  padding-bottom: 30px;
 }
 
 .banner__subtitle {
   font-size: 1.5625em;
+  font-weight: 400;
+  padding-bottom: 30px;
 }
 
 .blue-color {
@@ -94,14 +98,32 @@ body {
 }
 
 .banner__button {
+  padding: 18px 50px;
   display: inline-block;
-  background-color: #F2B4BF;
+  position: relative;
+  background-color: #FFFFFF;
   color: #323139;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 0.9375em;
-  width: 283px;
-  height: 54,36px;
-  text-align: center;
+  border: 1.5px solid #E67187;
+  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.banner__button:after {
+  content: "";
+}
+
+.banner__button:active {
+  display: inline-block;
+  position: relative;
+  background-color: #E67187;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  /* У этой кнопки есть элемент "капля", которая задается отдельно через ::after */
 }
 /*# sourceMappingURL=main.css.map */
