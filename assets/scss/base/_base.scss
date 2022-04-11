@@ -2,4 +2,70 @@
 
 body {
     font-family: $base-font;
+    box-sizing: border-box;
+}
+
+button {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 $tabled-padding;
+
+    @media (max-width: $mobile-large) {
+        padding: 0 $mobile-padding;
+    }
+}
+
+h1 {
+    font-weight: 700;
+    font-size: $title;
+    line-height: 50px;
+
+    @media (max-width: 767px) {
+        font-size: $subtitle;
+        line-height: 30px;
+    }
+}
+
+.pink-button {
+    @include borderButton;
+    height: 54px;
+
+    @media (max-width: $mobile-large) {
+        height: 38px;
+    }
+
+    ::before {
+        @include drop;
+    }
+}
+
+.arrow-next,
+.arrow-prev {
+    cursor: pointer;
+
+    @media (max-width: $mobile-large) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @media (max-width: $mobile-large) {
+        display: block;
+    }
+}
+
+.desktop {
+    @media (max-width: $mobile-large) {
+        display: none;
+    }
+}
+
+.invisible {
+    opacity: 0;
 }

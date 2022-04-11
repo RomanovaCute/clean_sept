@@ -57,6 +57,136 @@ table {
 /* Необходимо указать padding'и - они для каждой кнопки свои */
 body {
   font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+
+button {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.625em;
+  line-height: 50px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5625em;
+    line-height: 30px;
+  }
+}
+
+.pink-button {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: #323139;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  border: 2px solid #E67187;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: background-color .2s ease, color .2s ease;
+  padding: 0 50px;
+  cursor: pointer;
+  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  height: 54px;
+}
+
+@media (max-width: 767px) {
+  .pink-button {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pink-button:hover {
+    background-color: #E67187;
+    color: #FFFFFF;
+  }
+  .pink-button:hover svg {
+    left: calc(100% + 15px);
+  }
+}
+
+.pink-button svg {
+  position: absolute;
+  transition: left .2s ease;
+  left: calc(100% - 25px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .pink-button svg {
+    left: calc(100% - 10px);
+  }
+}
+
+@media (max-width: 767px) {
+  .pink-button {
+    height: 38px;
+  }
+}
+
+.pink-button ::before {
+  content: '';
+  position: absolute;
+  background: url("../images/drop.svg") no-repeat;
+  width: 14px;
+  height: 22px;
+  left: -8px;
+  bottom: -11px;
+}
+
+.arrow-next,
+.arrow-prev {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .arrow-next,
+  .arrow-prev {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.invisible {
+  opacity: 0;
 }
 
 .header {
@@ -166,6 +296,123 @@ body {
   }
 }
 
+.documents {
+  padding: 40px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .documents {
+    padding: 30px 0 60px 0;
+  }
+}
+
+.documents h1 {
+  margin-bottom: 31px;
+}
+
+@media (max-width: 767px) {
+  .documents h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.documents h1 span {
+  color: #22B5BF;
+}
+
+.documents-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .documents-content {
+    display: block;
+  }
+}
+
+.documents-content .background-plus {
+  position: absolute;
+  right: 30px;
+  top: -30px;
+}
+
+.documents-content p {
+  line-height: 18px;
+}
+
+.documents-content p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.documents-content p:last-of-type {
+  margin-bottom: 30px;
+}
+
+.documents-text {
+  flex-basis: 457px;
+}
+
+.documents-slider {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .documents-slider {
+    width: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .documents-slider {
+    width: 100%;
+  }
+}
+
+.documents-slider .swiper {
+  width: 511px;
+  margin: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .documents-slider .swiper {
+    margin: 0;
+    margin-right: -15px;
+    width: calc(100% + 15px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .documents-slider .swiper-slide {
+    width: 94px;
+  }
+}
+
+.documents-slider__item {
+  border: 2px solid #22B5BF;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: calc(100% - 4px);
+  margin: 0 auto;
+}
+
+.documents-slider__item img {
+  width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .documents-slider__item {
+    width: 94px;
+    height: 130px;
+  }
+}
+
 .benefits {
   max-width: 1440px;
   margin: 0 auto;
@@ -198,36 +445,15 @@ body {
   width: 65.5%;
 }
 
-.benefits__text {
+.benefits__text_button .benefits__text {
   font: "Roboto", sans-serif;
   font-size: 14.5px;
   text-align: left;
+  margin-bottom: 30px;
 }
 
-.benefits__text span {
+.benefits__text_button .benefits__text span {
   font-weight: 600;
-}
-
-.benefits__button {
-  display: inline-block;
-  position: relative;
-  background-color: #FFFFFF;
-  color: #323139;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.9375em;
-  border: 1.5px solid #E67187;
-  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
-  margin-top: 30px;
-  padding-top: 18px;
-  width: 255.74px;
-  height: 36.36px;
-  text-align: center;
-}
-
-.benefits__button a {
-  text-decoration: none;
-  color: #323139;
 }
 
 .benefits__pic {
@@ -236,16 +462,39 @@ body {
   background-position: bottom;
   width: 34.5%;
   max-width: 260.56px;
-  max-height: 200px;
+  max-height: 210px;
   text-align: center;
-  margin-top: -0.73em;
+  margin-top: -0.74em;
   margin-left: 34px;
 }
 
 .benefits__pic .benefits__pic_sanit {
-  max-height: 203.71px;
+  max-height: 207px;
   margin: 0 auto;
   object-fit: scale-down;
   object-position: center;
+}
+
+@media (max-width: 376px) {
+  .header {
+    width: 100%;
+    height: 54px;
+    padding: 0;
+  }
+  .header .container {
+    width: 100%;
+  }
+  .header .container .container_line {
+    justify-content: space-between;
+  }
+  .header .container .container_line .header__logo {
+    margin: 0 25px;
+  }
+  .header .container .container_line .header__menu {
+    margin-right: 15px;
+  }
+  .header .benefits__pic {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
