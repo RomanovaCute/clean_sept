@@ -1,0 +1,98 @@
+.clients{
+    padding: 40px 0 30px 0;
+    
+
+    @media (max-width: $mobile) {
+        padding: 30px 0 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+
+        span {
+            color: $blue-color;
+        }
+    }
+
+    .clients_container{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0px;
+
+        @media (min-width: 767px) and (max-width: 1024px) {
+            padding: 0 50px 0 50px;
+        }
+
+        .background-plus {
+            position: absolute;
+            right: 1320px;
+            top: 80px;
+        }
+
+        .clients_container__title{
+            display: flex;
+            justify-content: center;
+        }
+        .clients_container__blocks{
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: $mobile){
+                flex-wrap: wrap;
+                justify-content: center;
+
+                img{
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            .blocks_item{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                @media (max-width: $mobile){
+                    flex-direction: row;
+                    align-items: center;
+                    grid-gap: 15px;
+                }
+
+                &:not(:last-child){
+                    margin-right: 30px;
+
+                    @media (max-width: $mobile){
+                        margin: auto;
+                    }
+                }
+
+                .icon{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 15px;
+                }
+
+                .subtitle{
+                    display: flex;
+                    font-size: $subtitle;
+                    text-align: center;
+
+                    @media (max-width: $mobile){
+                        font-size: $text;
+                        text-align: start;
+                    }
+
+                    @media (min-width: 767px) and (max-width: 1024px) {
+                        font-size: 20px;
+                        }
+                }
+            }
+        }
+    }
+
+    
+}
