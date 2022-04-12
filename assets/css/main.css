@@ -55,6 +55,270 @@ table {
 /* Необходимо указать padding'и - они для каждой кнопки свои */
 body {
   font-family: "Rubik", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.625em;
+  line-height: 50px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5625em;
+    line-height: 30px;
+  }
+}
+
+.pink-button {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: #323139;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  border: 2px solid #E67187;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
+  padding: 0 50px;
+  cursor: pointer;
+  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  height: 54px;
+}
+
+@media (max-width: 767px) {
+  .pink-button {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pink-button:hover {
+    background-color: #E67187;
+    color: #FFFFFF;
+  }
+  .pink-button:hover svg {
+    left: calc(100% + 15px);
+  }
+}
+
+.pink-button svg {
+  position: absolute;
+  -webkit-transition: left .2s ease;
+  transition: left .2s ease;
+  left: calc(100% - 25px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .pink-button svg {
+    left: calc(100% - 10px);
+  }
+}
+
+@media (max-width: 767px) {
+  .pink-button {
+    height: 38px;
+  }
+}
+
+.pink-button ::before {
+  content: '';
+  position: absolute;
+  background: url("../images/drop.svg") no-repeat;
+  width: 14px;
+  height: 22px;
+  left: -8px;
+  bottom: -11px;
+}
+
+.arrow-next,
+.arrow-prev {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .arrow-next,
+  .arrow-prev {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.documents {
+  padding: 40px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .documents {
+    padding: 30px 0 60px 0;
+  }
+}
+
+.documents h1 {
+  margin-bottom: 31px;
+}
+
+@media (max-width: 767px) {
+  .documents h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.documents h1 span {
+  color: #22B5BF;
+}
+
+.documents-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .documents-content {
+    display: block;
+  }
+}
+
+.documents-content .background-plus {
+  position: absolute;
+  right: 30px;
+  top: -30px;
+}
+
+.documents-content p {
+  line-height: 18px;
+}
+
+.documents-content p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.documents-content p:last-of-type {
+  margin-bottom: 30px;
+}
+
+.documents-text {
+  -ms-flex-preferred-size: 457px;
+      flex-basis: 457px;
+}
+
+.documents-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .documents-slider {
+    width: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .documents-slider {
+    width: 100%;
+  }
+}
+
+.documents-slider .swiper {
+  width: 511px;
+  margin: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .documents-slider .swiper {
+    margin: 0;
+    margin-right: -15px;
+    width: calc(100% + 15px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .documents-slider .swiper-slide {
+    width: 94px;
+  }
+}
+
+.documents-slider__item {
+  border: 2px solid #22B5BF;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: calc(100% - 4px);
+  margin: 0 auto;
+}
+
+.documents-slider__item img {
+  width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .documents-slider__item {
+    width: 94px;
+    height: 130px;
+  }
 }
 
 .banner {
@@ -68,9 +332,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 5%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .banner__leftside {
@@ -89,62 +356,134 @@ body {
   padding-bottom: 30px;
 }
 
-.banner__subtitle {
-  font-size: 1.5625em;
-  font-weight: 400;
-  padding-bottom: 30px;
+@media (max-width: 376px) {
+  .banner__subtitle {
+    font-size: 1.5625em;
+    font-weight: 400;
+    padding-bottom: 30px;
+  }
+  .blue-color {
+    color: #22B5BF;
+  }
+  .banner__button {
+    padding: 18px 50px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: #323139;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.9375em;
+    border: 2px solid #E67187;
+    font-weight: 900;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-transition: background-color .2s ease, color .2s ease;
+    transition: background-color .2s ease, color .2s ease;
+    padding: 0 50px;
+    cursor: pointer;
+    /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  }
 }
 
-.blue-color {
-  color: #22B5BF;
+@media (max-width: 376px) and (max-width: 767px) {
+  .banner__button {
+    padding: 0 16px;
+  }
 }
 
-.banner__button {
-  padding: 18px 50px;
-  display: inline-block;
-  position: relative;
-  background-color: #FFFFFF;
-  color: #323139;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.9375em;
-  border: 1.5px solid #E67187;
-  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.banner__button:after {
-  content: url(/assets/images/drop.svg);
-  position: absolute;
-  left: -1%;
-  bottom: -25%;
-}
-
-.banner__button:before {
-  content: url(/assets/images/main_banner/Стрелка.png);
-  position: absolute;
-  right: -10%;
-}
-
-.banner__button:hover {
-  display: inline-block;
-  position: relative;
-  background-color: #E67187;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.9375em;
-  /* У этой кнопки есть элемент "капля", которая задается отдельно через ::after */
-}
-
-.banner__img {
-  max-width: 100%;
-  padding-top: 17%;
-  position: absolute;
+@media (max-width: 376px) and (min-width: 768px) {
+  .banner__button:hover {
+    background-color: #E67187;
+    color: #FFFFFF;
+  }
+  .banner__button:hover svg {
+    left: calc(100% + 15px);
+  }
 }
 
 @media (max-width: 376px) {
+  .banner__button svg {
+    position: absolute;
+    -webkit-transition: left .2s ease;
+    transition: left .2s ease;
+    left: calc(100% - 25px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 376px) and (max-width: 767px) {
+  .banner__button svg {
+    left: calc(100% - 10px);
+  }
+}
+
+@media (max-width: 376px) {
+  .banner__button::before {
+    content: '';
+    content: '';
+    position: absolute;
+    background: url("../images/drop.svg") no-repeat;
+    width: 14px;
+    height: 22px;
+    left: -8px;
+    bottom: -11px;
+  }
+}
+
+@media (max-width: 376px) and (max-width: 767px) {
+  padding: 0 16px;
+}
+
+@media (max-width: 376px) and (min-width: 768px) {
+  :hover {
+    background-color: #E67187;
+    color: #FFFFFF;
+  }
+  :hover svg {
+    left: calc(100% + 15px);
+  }
+}
+
+@media (max-width: 376px) {
+  svg {
+    position: absolute;
+    -webkit-transition: left .2s ease;
+    transition: left .2s ease;
+    left: calc(100% - 25px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 376px) and (max-width: 767px) {
+  svg {
+    left: calc(100% - 10px);
+  }
+}
+
+@media (max-width: 376px) {
+  .banner__rightside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .banner__img {
+    max-width: 50%;
+    padding-top: 17%;
+    position: absolute;
+  }
   .banner__title {
     font-size: subtitle;
     font-weight: 700;
