@@ -1,0 +1,102 @@
+.documents {
+    padding: 40px 0 80px 0;
+
+    @media (max-width: $mobile-large) {
+        padding: 30px 0 60px 0;
+    }
+    
+    h1 {
+        margin-bottom: 31px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+
+        span {
+            color: $blue-color;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        position: relative;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+
+        .background-plus {
+            position: absolute;
+            right: 30px;
+            top: -30px;
+        }
+
+        p {
+            line-height: 18px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &-text {
+        flex-basis: 457px;
+    }
+
+    &-slider {       
+        display: flex;
+        align-items: center;
+        
+        @media (max-width: $tablet - 1px) {
+            width: 450px;
+        }
+
+        @media (max-width: $mobile-large) {
+            width: 100%;
+        }
+
+        .swiper {
+            width: 511px;
+            margin: 0 20px;
+
+            @media (max-width: $mobile-large) {
+                margin: 0;
+                margin-right: -#{$mobile-padding};
+                width: calc(100% + #{$mobile-padding});
+                margin-bottom: 20px;
+            }
+        }
+
+        .swiper-slide {
+            @media (max-width: $mobile-large) {
+                width: 94px;
+            }
+        }
+
+        &__item {
+            border: 2px solid $blue-color;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: calc(100% - 4px);
+            margin: 0 auto;   
+
+            img {
+                width: 100%;
+                max-height: 100%;
+                text-align: center;
+            }
+            
+            @media (max-width: $mobile-large) {
+                width: 94px;
+                height: 130px;
+            }
+        }
+    }
+}
