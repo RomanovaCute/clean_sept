@@ -1,5 +1,4 @@
 .header {
-    max-width: 1900px;
     padding-top: 15px;
     padding-bottom: 15px;
     align-items: center;
@@ -7,21 +6,21 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
     
     .container{
-        max-width: 1440px;
+        max-width: 1280px;
         margin: 0 auto;
-
-        .container_line{
-            display: flex;
-            align-items: center;
-
-            .header__logo{
-                margin: 16.7px 234.93px 16.7px 143px;
-            }
+        padding: 0 $tabled-padding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
             .header__contacts{
-                margin-right: 54.98px;
                 font-size: $text;
                 align-items: center;
+                justify-content: flex-end;
+
+                @media (max-width: $mobile-large){
+                    display: none;
+                }
 
                 ul{
                     display: flex;
@@ -51,24 +50,24 @@
                     width: 251.07px;
                     height: 54.36px;
                     transition: all .3s linear;
+                    }
 
+                .header__menu{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-right: 150px;
                 }
 
         a{
             text-decoration: none;
             color: $text_dark;
             font-weight: 700;
-        }
             }
-            .header__menu{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 150px;
-            }
+        
+            
         }
     }
-
 }
 .header ul li:not(:last-child){
     margin-right: 30px;
@@ -78,16 +77,11 @@
     .header{
         width: 100%;
         height: 54px;
-        padding: 0;
+        padding: 0 15px;
 
         .container{
-            width: 100%;
             height: 100%;
-            justify-content: center;
-        
-            .container_line{
             justify-content: space-between;
-            height: 100%;
 
                 .header__logo{
                     margin: 0 25px;
@@ -113,4 +107,3 @@
         display: none;
         }
     }
-}
