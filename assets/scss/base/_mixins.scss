@@ -47,3 +47,13 @@
 
     /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
 }
+
+@mixin drop {    
+    content: '';
+    position: absolute;
+    background: url('../images/drop.svg') no-repeat;
+    width: 14px;
+    height: 22px;
+    left: -8px;
+    bottom: -11px;    
+}

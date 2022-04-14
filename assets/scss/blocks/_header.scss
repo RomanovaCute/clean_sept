@@ -44,6 +44,10 @@
                     position: relative;
                     width: 251.07px;
                     height: 54.36px;
+
+                    a{
+                        color: inherit;
+                    }
                 }
                 .contacts_button:hover{
                     @include dark-pinkButton;
