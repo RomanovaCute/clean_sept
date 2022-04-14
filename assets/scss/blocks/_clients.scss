@@ -41,7 +41,7 @@
             display: flex;
             justify-content: space-between;
 
-            @media (max-width: $mobile){
+            @media (max-width: $mobile-large){
                 flex-wrap: wrap;
                 justify-content: center;
 
@@ -65,8 +65,9 @@
                 &:not(:last-child){
                     margin-right: 30px;
 
-                    @media (max-width: $mobile){
-                        margin: auto;
+                    @media (min-width: $mobile) and (max-width: $mobile-large) {
+                        margin: 10px auto 10px auto;
+                        font-size: $text;
                     }
                 }
 
