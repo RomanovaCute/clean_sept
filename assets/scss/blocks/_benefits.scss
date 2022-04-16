@@ -1,66 +1,55 @@
 .benefits{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-.benefits__container {
-    max-width: 1140px;
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap; 
-    flex-direction: row;
-    margin-left: 150px;
-}
-.benefits__header {
-    display: block ;
-    width: 65.5%;
-    font-size: $title;
-    font: $base-font;
-    font-weight: 700;
-    span{
-        color: $title_blue;
+    margin: 86px 0 68px;
+
+    @media (max-width: $mobile-large) {
+        margin: 60px 0 51px;
     }
-}
-.benefits__text_button {
-    display: block;
-    padding-top: 30px;
-    width: 65.5%;
-    .benefits__text {
-        font:$text-font;
+
+    &-content {
+        display: flex;
+    }
+
+    h1 {       
+        max-width: 65.5%;
+        
+        span{
+            color: $title_blue;
+        }
+    }
+
+    &__text_button {
+        display: block;
+        padding-top: 30px;
+        width: 65.5%;
+        margin-right: 34px;
+
+        @media (max-width: $mobile-large) {
+            width: 100%;
+        }
+    }
+
+    &__text {
         font-size: 14.5px;
         text-align: left;
         margin-bottom: 30px;
+        line-height: 18px;
         span {
             font-weight: 600;
         }
     }
-  
-}
 
+    &__pic{
+        background-image: url(/assets/images/benefits_rectangle_27.png) ;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        width: 260.56px;
+        height: 210px;
+        text-align: center;
+        margin-top: -0.74em;
 
-
-.benefits__pic{
-background-image: url(/assets/images/benefits_rectangle_27.png) ;
-background-repeat: no-repeat;
-background-position: bottom;
-width: 34.5%;
-max-width: 260.56px;
-max-height: 210px;
-text-align: center;
-margin-top: -0.74em;
-margin-left: 34px;
-    .benefits__pic_sanit {
-        max-height: 207px;
-        margin: 0 auto;
-        object-fit: scale-down;
-        object-position: center;
-    }
-}
-@media (max-width: $mobile) {
-    .benefits__container {
-        
-    }
-    .benefits__pic{
-    display: none;
+        img {
+            margin-left: 50px;
         }
     }
 }

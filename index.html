@@ -6,19 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="./assets/scss/main.css">
 </head>
 
 <body>
     <div class="header">
-        <div class="container">
-            <div class="container_line">
-                <div class="header__logo">
-                    <img class="logo" src="/assets/images/logo.svg" alt="logo" />
-                </div>
-                <div class="header__contacts">
+        <div class="container">            
+            <div class="header__logo">
+                    <img class="logo" src="/assets/images/logo.svg" alt="logo"/>
+            </div>
+            <div class="header__contacts">
                     <ul>
                         <li class="contacts_e-mail">
                             <a href="clean-sept@gmail.com">clean-sept@gmail.com</a>
@@ -30,49 +28,85 @@
                         <li class="contacts_button">
                             <a href="...">заказать звонок</a>
                         </li>
-                    </ul>
-                </div>
-                <div class="header__menu">
-                    <a href="..."><img src="/assets/images/menu.svg" alt="menu" /></a>
-                </div>
+                    </ul>               
             </div>
+            <div class="header__menu">
+                <a href="..."><img src="/assets/images/menu.svg" alt="menu"/></a>
+            </div>  
         </div>
     </div>
     <div class="benefits">
-        <div class="benefits__container">
-            <div class="benefits__header">
-                Чем хорош наш <span>продукт</span> ?
-            </div>
-            <div class="benefits__text_button">
-                <div class="benefits__text">
-                    <span>Антисептики</span> – это химические вещества, предназначенные для нанесения на живые ткани,
-                    такие как кожа, в целях уничтожения или подавления роста болезнетворных микроорганизмов. Они
-                    помогают уменьшать
-                    возможный риск инфекции, сепсиса или других болезней. Более того, антисептики используются для
-                    очищения кожи
-                    перед ее надрезанием в хирургических целях.
-
+        <div class="container">
+            <h1>Чем хорош наш <span>продукт</span> ?</h1>
+            <div class="benefits-content">
+                <div class="benefits__text_button">
+                    <div class="benefits__text">
+                        <span>Антисептики</span> – это химические вещества, предназначенные для нанесения на живые ткани,
+                        такие как кожа, в целях уничтожения или подавления роста болезнетворных микроорганизмов. Они
+                        помогают уменьшать
+                        возможный риск инфекции, сепсиса или других болезней. Более того, антисептики используются для
+                        очищения кожи
+                        перед ее надрезанием в хирургических целях.
+                    </div>
+                    <button class="pink-button">
+                        <span>связаться с нами</span>
+                        <svg class="desktop" width="58" height="22" viewBox="0 0 58 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.134766" y="9.75244" width="50" height="2" fill="#323139" />
+                            <rect x="46.5991" y="0.145752" width="15" height="5" transform="rotate(45 46.5991 0.145752)"
+                                fill="#323139" />
+                            <rect x="57.2056" y="10.7524" width="15" height="5" transform="rotate(135 57.2056 10.7524)"
+                                fill="#323139" />
+                        </svg>
+                        <svg class="mobile" width="30" height="18" viewBox="0 0 30 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.351562" y="8.02979" width="25.9481" height="2" fill="#323139" />
+                            <rect x="21.418" y="0.351807" width="12" height="4" transform="rotate(45 21.418 0.351807)"
+                                fill="#323139" />
+                            <rect x="29.9033" y="8.83716" width="12" height="4" transform="rotate(135 29.9033 8.83716)"
+                                fill="#323139" />
+                        </svg>
+                    </button>
                 </div>
-
-                <button class="pink-button desktop">
-                    <span>связаться с нами</span>
-                    <svg class="desktop" width="58" height="22" viewBox="0 0 58 22" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.134766" y="9.75244" width="50" height="2" fill="#323139" />
-                        <rect x="46.5991" y="0.145752" width="15" height="5" transform="rotate(45 46.5991 0.145752)"
-                            fill="#323139" />
-                        <rect x="57.2056" y="10.7524" width="15" height="5" transform="rotate(135 57.2056 10.7524)"
-                            fill="#323139" />
-                    </svg>
+                <div class="benefits__pic desktop">
+                    <img src="./assets/images/benefits_pics2.png" alt="Санитайзер с дозатором">
+                </div> 
+            </div>            
+        </div>
+    </div>
+<div class="clients">
+        <div class="container">
+            <div class="background-plus desktop">
+                <img src="/assets/images/plus.svg" alt="plus"/>
             </div>
-            <div class="benefits__pic">
-                <img src="./assets/images/benefits_pics2.png" alt="Санитайзер с дозатором">
-                <svg class="benefits__pic_sanit" width="31" height="31" transform='translate(70 25)' viewBox="0 0 31 31"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="2" height="30" transform="matrix(-1 0 0 1 16.3037 0.83551)" fill="#E67187" />
-                    <rect width="5" height="30" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 30.3037 18.3355)"
-                        fill="#E67187" />
-                </svg>
+            <div class="clients__title">
+                <h1><span>С кем</span> мы работаем?</h1>
+            </div>
+            <div class="clients__blocks">
+                <div class="blocks_item">
+                    <div class="icon">
+                        <img src="/assets/images/photo1.png" alt="photo1"/>
+                    </div>
+                    <div class="subtitle">
+                        <span>Организации<br>жизнеобеспечения</span>
+                    </div>
+                </div>
+                <div class="blocks_item">
+                    <div class="icon">
+                        <img src="/assets/images/photo2.png" alt="photo2"/>
+                    </div>
+                    <div class="subtitle">
+                        <span>Крупные и средние<br>предприятия </span>
+                    </div>
+                </div>
+                <div class="blocks_item">
+                    <div class="icon">
+                        <img src="/assets/images/photo3.png" alt="photo3"/>
+                    </div>
+                    <div class="subtitle">
+                        <span>Частные клиенты и<br>малый бизнес</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -82,8 +116,7 @@
             <h1>Документы и <span>сертификаты</span></h1>
             <div class="documents-content">
                 <div class="background-plus desktop">
-                    <svg class='benefits__cross' width="31" height="31" viewBox="0 0 31 31" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="2" height="30" transform="matrix(-1 0 0 1 16.1055 0.911621)" fill="#22B5BF" />
                         <rect width="5" height="30" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 30.1055 18.4116)"
                             fill="#22B5BF" />
@@ -188,9 +221,53 @@
             </button>
         </div>
     </div>
-
+</div>
+    <div class="choose">
+        <div class="container">
+            <h1><span>Почему </span>нас выбирают?</h1>
+            <div class="choose__cards">
+                <div class="choose__card">
+                    <img class="choose__card__img" src="./assets/images/water tank.png" alt="Иконка бака с краном">
+                    <div class="choose__card__text">
+                        Качетвенный продукт
+                    </div>
+                </div>
+                <div class="choose__card">
+                    <img class="choose__card__img" src="./assets/images/schedule.png" alt="Иконка формы с табличкой">
+                    <div class="choose__card__text">
+                        Удобная форма рассчета с НДС!
+                    </div>
+                </div>
+                <div class="choose__card">
+                    <img class="choose__card__img" src="./assets/images/container.png" alt="Иконка двух баков">
+                    <div class="choose__card__text">
+                        Прогрессивная система скидок
+                    </div>
+                </div>
+                <div class="choose__card">
+                    <img class="choose__card__img" src="./assets/images/speed.png" alt="Иконка секундомера">
+                    <div class="choose__card__text">
+                        Доставка в течение 24 часов с момента подачи заявки </div>
+                </div>
+                <div class="choose__card">
+                    <img class="choose__card__img" src="./assets/images/freight.png" alt="Иконка тележка с коробками">
+                    <div class="choose__card__text">
+                        Быстрая отгрузка товара и удобное сотрудничество.
+                    </div>
+                </div>
+                <div class="choose__card">
+                    <img class="choose__card__img" src="./assets/images/check list.png" alt="Иконка бланк с чек листом">
+                    <div class="choose__card__text">
+                        Оплата на условиях рассрочки от 20 дней
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/index.js"></script>
+
+    
 </body>
 
 </html>
