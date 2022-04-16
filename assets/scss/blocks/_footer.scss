@@ -1,10 +1,13 @@
-.footer{
-    display: flex;
-    max-width: 100%;
+.footer{   
     height: 68.41px;
     margin-top: 90px;
-    background-color: $dark-color;
-    justify-content: flex-end;
+    background-color: $dark-color;   
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+    }
 
     @media (max-width: $mobile){
         height: 53.54px;
@@ -12,17 +15,16 @@
         margin-top: 40px;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: $text_white;
         font-weight: 700;
-        }
+    }
     
     ul{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 146px;
         width: 100%;
 
         @media (max-width: $mobile){

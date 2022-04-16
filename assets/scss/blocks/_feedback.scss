@@ -1,136 +1,154 @@
 .feedback{
+    margin-top: 90px;
 
-    .feedback-wrapper{
+    @media (max-width: $mobile-large) {
+        margin-top: 60px;
+    }
+
+    .container{
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        padding: 0 165px;
-        
-        @media (max-width: $mobile) {
+        gap: 30px;
+
+        @media (max-width: $mobile-large) {
             padding: $mobile-padding;
             margin: 0 auto;
             flex-wrap: wrap;
             grid-gap: 60px;
             flex-direction: column-reverse;
         }
+    }
 
-        .feedback-wrapper__map{
+    &-map{
+        display: flex;
+        position: relative;
+        width: calc(100% - 455px - 30px);
+
+        @media (max-width: $mobile-large) {
+           height: 375px;
+           width: 100%;
+           flex-direction: column;
+        }
+
+        @media (max-width: $mobile){
+            flex-direction: column;
+        }
+
+        h2 {
+            display: none;
+            font-weight: 700;
+            font-size: $subtitle;
+            line-height: 30px;
+            margin-bottom: 14px;            
+
+            span{
+                color: $blue-color;
+            }
+
+            @media (max-width: $mobile-large){
+                display: block;
+            }
+        }
+
+        img{
+            width: 100%;
+            max-height: 100%;
+        }
+
+        p{
             display: flex;
-            position: relative;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #22B5BF;
+            box-sizing: border-box;
+            border-radius: 10px;
+            max-width: 454.15px;
+            height: 84px;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            top: 74px;
+            left: 32px;
+            font-size: $text;
 
-            h2{
-                display: none;
+            @media (max-width: $mobile) {
+                position: initial;
+                margin-top: 15px;
+            }
+        }
+    }  
+
+    &-forms {
+        display: flex;
+        flex-direction: column;
+
+        input{
+            height: 54.36px;
+            @include input;
+            padding-left: 22px;
+        }
+
+        textarea{
+            height: 110px;
+            @include input;
+            padding-left: 22px;
+            padding-top: 17.31px;
+        }
+    }
+    
+    &-button{
+
+        button{
+            width: 100%;
+            @include blueButton;
+            padding: 18.5px;
+            font-family: $base-font;
+            font-weight: bold;
+            border: 0;
+
+            &:hover {
+
+                @media (min-width: $mobile-large + 1px) {
+                    background-color: $dark-pink-color;
+                    color: $dark-color;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+        max-width: 454.66px;
+
+        @media (max-width: $mobile-large) {
+            max-width: 100%;
+        }
+
+        .form_title{
+            margin-bottom: 30px;
+
+            h2 {
                 font-weight: 700;
-                font-size: $subtitle;
-                line-height: 30px;
-                margin-bottom: 14px;
-                
+                font-size: $title;
+                line-height: 50px;
+            
+                @media (max-width: 767px) {
+                    font-size: $subtitle;
+                    line-height: 30px;
+                }
 
                 span{
                     color: $blue-color;
                 }
-
-                @media (max-width: $mobile){
-                    display: block;
-                }
-            }
-
-            @media (max-width: $mobile){
-                flex-direction: column;
-            }
-
-            img{
-                width: 100%;
-            }
-
-            p{
-                display: flex;
-                position: absolute;
-                background: rgba(255, 255, 255, 0.8);
-                border: 2px solid #22B5BF;
-                box-sizing: border-box;
-                border-radius: 10px;
-                max-width: 454.15px;
-                height: 84px;
-                justify-content: center;
-                align-items: center;
-                padding: 15px;
-                top: 74px;
-                left: 32px;
-                font-size: $text;
-
-                @media (max-width: $mobile) {
-                    position: initial;
-                    margin-top: 15px;
-                }
             }
         }
 
-        .feedback-wrapper__form{
-            display: flex;
-            flex-direction: column;
-            max-width: 454.66px;
-
-            .form_title{
-                margin-bottom: 30px;
-
-                h2 {
-                    font-weight: 700;
-                    font-size: $title;
-                    line-height: 50px;
-                
-                    @media (max-width: 767px) {
-                        font-size: $subtitle;
-                        line-height: 30px;
-                    }
-
-                    span{
-                        color: $blue-color;
-                    }
-                }
-            }
-
-            .form_subtitle{
-                margin-bottom: 30px;
-            }
-
-            .feedback-wrapper_forms{
-                display: flex;
-                flex-direction: column;
-
-                input{
-                    height: 54.36px;
-                    @include input;
-                    padding-left: 22px;
-                }
-
-                textarea{
-                    height: 110px;
-                    @include input;
-                    padding-left: 22px;
-                    padding-top: 17.31px;
-                }
-            }
-            
-            .feedback-wrapper_button{
-                button{
-                    width: 100%;
-                    @include blueButton;
-                    padding: 18.5px;
-                    font-family: $base-font;
-                    font-weight: bold;
-                    border: 0;
-
-                    &:hover {
-
-                        @media (min-width: $mobile-large + 1px) {
-                            background-color: $dark-pink-color;
-                            color: $dark-color;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-            }
+        .form_subtitle{
+            margin-bottom: 30px;
         }
+        
     }
 }
