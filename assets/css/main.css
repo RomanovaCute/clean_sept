@@ -321,10 +321,22 @@ h1 {
   }
 }
 
-.banner {
-  max-width: 100%;
-  height: 447px;
+.wrapper {
   background-color: #F9F9F9;
+  padding: 40px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 30px 0 60px 0;
+  }
+}
+
+.banner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,12 +344,23 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 5%;
+  font-family: "Rubik", sans-serif;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .banner__leftside {
@@ -350,54 +373,76 @@ h1 {
           flex-direction: column;
 }
 
+@media (max-width: 767px) {
+  .banner__leftside {
+    padding: 0 15px;
+  }
+}
+
 .banner__title {
   font-size: 2.625em;
   font-weight: 700;
-  padding-bottom: 30px;
+  margin-bottom: 31px;
 }
 
-@media (max-width: 376px) {
-  .banner__subtitle {
+@media (max-width: 767px) {
+  .banner__title {
     font-size: 1.5625em;
-    font-weight: 400;
-    padding-bottom: 30px;
-  }
-  .blue-color {
-    color: #22B5BF;
-  }
-  .banner__button {
-    padding: 18px 50px;
-    display: inline-block;
-    position: relative;
-    background-color: transparent;
-    color: #323139;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 0.9375em;
-    border: 2px solid #E67187;
-    font-weight: 900;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    -webkit-transition: background-color .2s ease, color .2s ease;
-    transition: background-color .2s ease, color .2s ease;
-    padding: 0 50px;
-    cursor: pointer;
-    /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+    margin-bottom: 20px;
   }
 }
 
-@media (max-width: 376px) and (max-width: 767px) {
+.banner__subtitle {
+  font-size: 1.5625em;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .banner__subtitle {
+    font-size: 0.9375em;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.blue-color {
+  color: #22B5BF;
+}
+
+.banner__button {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: #323139;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  border: 2px solid #E67187;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
+  padding: 0 50px;
+  cursor: pointer;
+  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  height: 54px;
+  width: 300px;
+}
+
+@media (max-width: 767px) {
   .banner__button {
     padding: 0 16px;
   }
 }
 
-@media (max-width: 376px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .banner__button:hover {
     background-color: #E67187;
     color: #FFFFFF;
@@ -407,92 +452,83 @@ h1 {
   }
 }
 
-@media (max-width: 376px) {
-  .banner__button svg {
-    position: absolute;
-    -webkit-transition: left .2s ease;
-    transition: left .2s ease;
-    left: calc(100% - 25px);
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    pointer-events: none;
-  }
+.banner__button svg {
+  position: absolute;
+  -webkit-transition: left .2s ease;
+  transition: left .2s ease;
+  left: calc(100% - 25px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
 }
 
-@media (max-width: 376px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .banner__button svg {
     left: calc(100% - 10px);
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 767px) {
+  .banner__button {
+    width: 214px;
+    font-size: 0.9375em;
+  }
+}
+
+.banner__button::before {
+  content: '';
+  content: '';
+  position: absolute;
+  background: url("../images/drop.svg") no-repeat;
+  width: 14px;
+  height: 22px;
+  left: -8px;
+  bottom: -11px;
+}
+
+@media (max-width: 767px) {
   .banner__button::before {
-    content: '';
-    content: '';
-    position: absolute;
-    background: url("../images/drop.svg") no-repeat;
-    width: 14px;
-    height: 22px;
-    left: -8px;
-    bottom: -11px;
+    padding: 0 16px;
   }
 }
 
-@media (max-width: 376px) and (max-width: 767px) {
-  padding: 0 16px;
+svg {
+  position: absolute;
+  -webkit-transition: left .2s ease;
+  transition: left .2s ease;
+  left: calc(100% - 25px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
 }
 
-@media (max-width: 376px) and (min-width: 768px) {
-  :hover {
-    background-color: #E67187;
-    color: #FFFFFF;
-  }
-  :hover svg {
-    left: calc(100% + 15px);
-  }
-}
-
-@media (max-width: 376px) {
-  svg {
-    position: absolute;
-    -webkit-transition: left .2s ease;
-    transition: left .2s ease;
-    left: calc(100% - 25px);
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    pointer-events: none;
-  }
-}
-
-@media (max-width: 376px) and (max-width: 767px) {
+@media (max-width: 767px) {
   svg {
     left: calc(100% - 10px);
   }
 }
 
-@media (max-width: 376px) {
-  .banner__rightside {
+.banner__rightside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner__img {
+  padding: 30px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .banner__img {
+    padding: -10px 0 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 100%;
-  }
-  .banner__img {
-    max-width: 50%;
-    padding-top: 17%;
-    position: absolute;
-  }
-  .banner__title {
-    font-size: subtitle;
-    font-weight: 700;
-    padding-bottom: 15px;
-  }
-  .banner__subtitle {
-    font-size: 1.5625em;
-    font-weight: 400;
-    padding-bottom: 30px;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
   }
 }
 /*# sourceMappingURL=main.css.map */
