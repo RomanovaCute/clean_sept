@@ -1,5 +1,5 @@
 body{
-    position: relative;
+    background-color: rgba(50, 49, 57, 0.21)
 }
 .popup{
     display: flex;
@@ -15,8 +15,125 @@ body{
     height:480px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    border-top: 3px solid $blue-color;
-    border-right: 3px solid $blue-color;
-    border-left: 3px solid $blue-color;
-    border-bottom: 3px solid $blue-color;
+    border: solid $blue-color;
+    
+    .popup_header{
+        display: flex;
+        border-bottom: 3px solid $blue-color;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        background: #F9F9F9;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        .logo{
+            padding: 12px 27px;
+        }
+
+        img{
+            width: 73px;
+            height: 33px;
+        }
+
+        .square_blue{
+            top: 20px;
+        }
+
+        button{
+            background: transparent;
+            border: none;
+        }
+    }
+
+    .popup_main{
+        display: flex;
+        padding-top: 20px;
+        justify-content: space-between;
+        gap: 32px;
+        padding: 30px;
+        width: 570px;
+
+        .popup_main__photo{
+            padding-top: 15px;
+        }
+
+        .popup_main__form{
+            display: flex;
+            flex-direction: column;
+            width: 455px;
+
+            h2{
+                font-size: $subtitle;
+            }
+
+            .popup_main__forms{
+                display: flex;
+                flex-direction: column;
+                margin-top: 24px;
+
+                input{
+                    @include input;
+                    width: 100%;
+                    height: 55px;
+                    padding-left: 24px;
+                }
+            }
+
+            .popup_main__number{
+                display: flex;
+                margin-bottom: 18px;
+                gap: 10px;
+                align-items: center;
+
+                h3{
+                    font-size: $text;
+                }
+
+                .button{
+                    display: flex;
+                    justify-content: space-between;
+
+                    span{
+                        font-size: $subtitle;
+                        font-weight: 700;
+                    }
+
+                    .button_minus{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        border: none;
+                    }
+
+                    .button_plus{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: transparent;
+                        border: none;
+                        
+                        img{
+                            width: 11px;
+                            height: 11px;
+                            color: #323139;
+                        }
+                    }
+                }
+            }
+
+            .popup_main__button{
+
+                button {
+                    @include blueButton;
+                    width: 100%;
+                    border: none;
+                    height: 55px;
+                    font-weight: 700;
+                    font-family: $base-font;
+                }
+            }
+        }
+    }
 }

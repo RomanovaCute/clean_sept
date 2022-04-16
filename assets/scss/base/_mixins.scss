@@ -89,3 +89,14 @@
     left: -8px;
     bottom: -11px;    
 }
+
+@mixin input {
+    font-size: $text;
+    font-family: $base-font;
+    border: 2px solid #B0B0B0;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+    // padding: 17.31px 300.92px auto 21.58px;
+}
+
