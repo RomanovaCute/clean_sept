@@ -4,7 +4,9 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -700,4 +702,90 @@ svg {
     font-size: 0.9375em;
   }
 }
+/*# sourceMappingURL=main.css.map */
+.benefits {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.benefits__container {
+  max-width: 1140px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 150px;
+}
+
+.benefits__header {
+  display: block;
+  width: 65.5%;
+  font-size: 2.625em;
+  font: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+.benefits__header span {
+  color: #22B5BF;
+}
+
+.benefits__text_button {
+  display: block;
+  padding-top: 30px;
+  width: 65.5%;
+}
+
+.benefits__text_button .benefits__text {
+  font: "Roboto", sans-serif;
+  font-size: 14.5px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.benefits__text_button .benefits__text span {
+  font-weight: 600;
+}
+
+.benefits__pic {
+  background-image: url(/assets/images/benefits_rectangle_27.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 34.5%;
+  max-width: 260.56px;
+  max-height: 210px;
+  text-align: center;
+  margin-top: -0.74em;
+  margin-left: 34px;
+}
+
+.benefits__pic .benefits__pic_sanit {
+  max-height: 207px;
+  margin: 0 auto;
+  object-fit: scale-down;
+  object-position: center;
+}
+
+@media (max-width: 376px) {
+  .header {
+    width: 100%;
+    height: 54px;
+    padding: 0;
+  }
+  .header .container {
+    width: 100%;
+  }
+  .header .container .container_line {
+    justify-content: space-between;
+  }
+  .header .container .container_line .header__logo {
+    margin: 0 25px;
+  }
+  .header .container .container_line .header__menu {
+    margin-right: 15px;
+  }
+  .header .benefits__pic {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */
