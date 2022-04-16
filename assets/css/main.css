@@ -55,11 +55,13 @@ table {
 /* Необходимо указать padding'и - они для каждой кнопки свои */
 body {
   font-family: "Rubik", sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 button {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container {
@@ -97,9 +99,14 @@ h1 {
   font-size: 0.9375em;
   border: 2px solid #E67187;
   font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+  -webkit-transition: background-color .2s ease, color .2s ease;
   transition: background-color .2s ease, color .2s ease;
   padding: 0 50px;
   cursor: pointer;
@@ -125,6 +132,7 @@ h1 {
 
 .pink-button svg {
   position: absolute;
+  -webkit-transition: left .2s ease;
   transition: left .2s ease;
   left: calc(100% - 25px);
   top: 0;
@@ -319,8 +327,12 @@ h1 {
 }
 
 .documents-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 30px;
   position: relative;
 }
@@ -350,12 +362,17 @@ h1 {
 }
 
 .documents-text {
-  flex-basis: 457px;
+  -ms-flex-preferred-size: 457px;
+      flex-basis: 457px;
 }
 
 .documents-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 1023px) {
@@ -411,6 +428,13 @@ h1 {
   }
 }
 
+.wrapper {
+  background-color: #F9F9F9;
+  padding: 40px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
 .choose {
   padding: 40px 0 80px 0;
   color: F9F9F9;
@@ -422,16 +446,205 @@ h1 {
   }
 }
 
+.banner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: "Rubik", sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.banner__leftside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .banner__leftside {
+    padding: 0 15px;
+  }
+}
+
+.banner__title {
+  font-size: 2.625em;
+  font-weight: 700;
 .choose h1 {
   margin-bottom: 31px;
 }
 
 @media (max-width: 767px) {
+  .banner__title {
+    font-size: 1.5625em;
+    margin-bottom: 20px;
+  }
+}
+
+.banner__subtitle {
+  font-size: 1.5625em;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .banner__subtitle {
+    font-size: 0.9375em;
+    line-height: 20px;
   .choose h1 {
     margin-bottom: 20px;
   }
 }
 
+.blue-color {
+  color: #22B5BF;
+}
+
+.banner__button {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: #323139;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9375em;
+  border: 2px solid #E67187;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: background-color .2s ease, color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
+  padding: 0 50px;
+  cursor: pointer;
+  /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+  height: 54px;
+  width: 300px;
+}
+
+@media (max-width: 767px) {
+  .banner__button {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner__button:hover {
+    background-color: #E67187;
+    color: #FFFFFF;
+  }
+  .banner__button:hover svg {
+    left: calc(100% + 15px);
+  }
+}
+
+.banner__button svg {
+  position: absolute;
+  -webkit-transition: left .2s ease;
+  transition: left .2s ease;
+  left: calc(100% - 25px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .banner__button svg {
+    left: calc(100% - 10px);
+  }
+}
+
+@media (max-width: 767px) {
+  .banner__button {
+    width: 214px;
+    font-size: 0.9375em;
+  }
+}
+
+.banner__button::before {
+  content: '';
+  content: '';
+  position: absolute;
+  background: url("../images/drop.svg") no-repeat;
+  width: 14px;
+  height: 22px;
+  left: -8px;
+  bottom: -11px;
+}
+
+@media (max-width: 767px) {
+  .banner__button::before {
+    padding: 0 16px;
+  }
+}
+
+svg {
+  position: absolute;
+  -webkit-transition: left .2s ease;
+  transition: left .2s ease;
+  left: calc(100% - 25px);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  svg {
+    left: calc(100% - 10px);
+  }
+}
+
+.banner__rightside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner__img {
+  padding: 30px 0 80px 0;
+}
+
+@media (max-width: 767px) {
+  .banner__img {
+    padding: -10px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 .choose h1 span {
   color: #22B5BF;
 }
