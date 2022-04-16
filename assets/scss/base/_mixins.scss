@@ -10,7 +10,9 @@
 }
 
 @mixin dark-pinkButton {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     background-color: $button_dark-pink;
     color: $text_white;
@@ -22,11 +24,14 @@
 }
 
 @mixin blueButton {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $button_blue;
-    color: $text_white;
+    color: $white-color;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: bold;
     font-size: $button-text;
 }
 
