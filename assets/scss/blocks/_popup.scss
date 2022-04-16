@@ -16,6 +16,7 @@ body{
     background-color: #FFFFFF;
     border-radius: 10px;
     border: solid $blue-color;
+    z-index: 1;
     
     .popup_header{
         display: flex;
