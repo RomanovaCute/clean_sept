@@ -7,27 +7,35 @@
     text-transform: uppercase;
     text-decoration: none;
     font-size: $button-text;
+    cursor: pointer;
 }
 
 @mixin dark-pinkButton {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     background-color: $button_dark-pink;
     color: $text_white;
     text-transform: uppercase;
     text-decoration: none;
     font-size: $button-text;
+    cursor: pointer;
 
     /* У этой кнопки есть элемент "капля", которая задается отдельно через ::after */
 }
 
 @mixin blueButton {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $button_blue;
-    color: $text_white;
+    color: $white-color;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: bold;
     font-size: $button-text;
+    cursor: pointer;
 }
 
 @mixin borderButton {
@@ -88,4 +96,14 @@
     height: 22px;
     left: -8px;
     bottom: -11px;    
+}
+
+@mixin input {
+    font-size: $text;
+    font-family: $base-font;
+    border: 2px solid #B0B0B0;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+    // padding: 17.31px 300.92px auto 21.58px;
 }

@@ -1,0 +1,55 @@
+.benefits{
+    margin: 86px 0 68px;
+
+    @media (max-width: $mobile-large) {
+        margin: 60px 0 51px;
+    }
+
+    &-content {
+        display: flex;
+    }
+
+    h1 {       
+        max-width: 65.5%;
+        
+        span{
+            color: $title_blue;
+        }
+    }
+
+    &__text_button {
+        display: block;
+        padding-top: 30px;
+        width: 65.5%;
+        margin-right: 34px;
+
+        @media (max-width: $mobile-large) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 14.5px;
+        text-align: left;
+        margin-bottom: 30px;
+        line-height: 18px;
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__pic{
+        background-image: url(/assets/images/benefits_rectangle_27.png) ;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        width: 260.56px;
+        height: 210px;
+        text-align: center;
+        margin-top: -0.74em;
+
+        img {
+            margin-left: 50px;
+        }
+    }
+}

@@ -1,37 +1,28 @@
-.wrapper {
-    background-color: $light-gray-color;
-    padding: 40px 0 80px 0;
-   
-    @media (max-width: $mobile-large) {
-        padding: 30px 0 60px 0;
-        position: relative;
-    }
-}
-
 .banner {
-        max-width: 1180px;
-        margin: 0 auto;
-        padding: 0 $tabled-padding;
-        height: 300px;
-        display: flex;
-        flex-direction: row;
-        font-family: $base-font;
-        justify-content: space-between;
-    
-        @media (max-width: $mobile-large) {
-            padding: 0 $mobile-padding;
+        font-family: $base-font;  
+        background-color: $light-gray-color; 
+
+        .container {                 
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            padding: 82px 20px 80px;
+
+            @media (max-width: $mobile-large) {
+                padding: 60px 20px;
+            }
+
+            @media (max-width: $mobile-middle) {
+                padding: 60px 20px 140px;
+            }
         }
     }
     
 .banner__leftside {
     display: flex;
     flex-direction: column;
-
-    @media (max-width: $mobile-large) {
-        padding: 0 $mobile-padding;
-    }
+    z-index: 1;
 }
 
 .banner__title {
@@ -65,6 +56,8 @@ margin-bottom: 31px;
     @include borderButton;
     height: 54px;
     width: 300px;
+    padding: 0;
+    justify-content: center;
 
     @media (max-width: $mobile-large) {
         
@@ -99,6 +92,9 @@ svg {
 
 .banner__rightside {
     display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: -85px;
 
     @media (max-width: $mobile-large) {
         position:absolute;
@@ -106,14 +102,4 @@ svg {
         right: 20px;
     }
 
-}
-
-.banner__img {
-    padding: 30px 0 80px 0;
-
-    @media (max-width: $mobile-large) {
-        padding: 0;
-        display: flex;
-        justify-content: right;
-    }
 }
