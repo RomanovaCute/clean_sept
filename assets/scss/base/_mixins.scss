@@ -10,7 +10,9 @@
 }
 
 @mixin dark-pinkButton {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     background-color: $button_dark-pink;
     color: $text_white;
@@ -91,4 +93,5 @@
     height: 22px;
     left: -8px;
     bottom: -11px;    
+}
 }
