@@ -1,0 +1,22 @@
+body{
+    position: relative;
+}
+.popup{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items:center;
+    margin: 0 auto;
+    top: 196px;
+    left:400px;
+    right: 400px;
+    bottom: 112px;
+    width:629px;
+    height:480px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-top: 3px solid $blue-color;
+    border-right: 3px solid $blue-color;
+    border-left: 3px solid $blue-color;
+    border-bottom: 3px solid $blue-color;
+}
