@@ -101,11 +101,14 @@
                 input{
                     height: 54.36px;
                     @include input;
+                    padding-left: 22px;
                 }
 
                 textarea{
                     height: 110px;
                     @include input;
+                    padding-left: 22px;
+                    padding-top: 17.31px;
                 }
             }
             
