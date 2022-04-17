@@ -33,3 +33,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+const menuIconOpen = document.querySelector('.header__menu'),
+  asideMenu = document.querySelector('.aside-menu'),
+  menuIconClose = document.querySelector('#menu-close-icon'),
+  menuLinks = document.querySelectorAll('.aside-menu a');
+
+
+/**
+ * Открытие меню
+ */
+menuIconOpen.addEventListener('click', () => {
+  asideMenu.classList.add('open');
+  document.body.classList.add('fixed');
+});
+
+/**
+ * Закрытие меню
+ */
+menuIconClose.addEventListener('click', () => {
+  asideMenu.classList.remove('open');  
+});
+
+asideMenu.addEventListener('transitionend', (event) => {
+  if (!asideMenu.classList.contains('open')) {
+    document.body.classList.remove('fixed');
+  }  
+})
+
+/**
+ * Скролл к блоку по нажатию на ссылку в меню
+ */
+menuLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    const className = e.target.getAttribute('data-id'),
+      blockToScroll = document.querySelector(`.${className}`);
+
+    if (!blockToScroll) {
+      return;
+    }
+
+    asideMenu.classList.remove('open');  
+
+    document.querySelector(`.${className}`).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+  })
+})

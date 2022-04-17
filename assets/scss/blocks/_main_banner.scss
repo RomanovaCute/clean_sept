@@ -1,23 +1,39 @@
 .banner {
-        font-family: $base-font;  
-        background-color: $light-gray-color; 
+    font-family: $base-font;  
+    background-color: $light-gray-color; 
 
-        .container {                 
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-            padding: 82px 20px 80px;
+    .container {                 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding: 82px 20px 80px;
 
-            @media (max-width: $mobile-large) {
-                padding: 60px 20px;
-            }
+        @media (max-width: $mobile-large) {
+            padding: 60px 20px;
+        }
 
-            @media (max-width: $mobile-middle) {
-                padding: 60px 20px 140px;
-            }
+        @media (max-width: $mobile-middle) {
+            padding: 60px 20px 140px;
         }
     }
+
+    svg {
+        position: absolute;
+        transition: left .2s ease;
+        left: calc(100% - 25px);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        pointer-events: none;
+    
+        @media (max-width: $mobile-large) {
+            left: calc(100% - 10px);
+        }
+    }
+}
+
+    
     
 .banner__leftside {
     display: flex;
@@ -73,21 +89,6 @@ margin-bottom: 31px;
 @media (max-width: $mobile-large) {
     padding: 0 16px;
 }
-}
-
-
-svg {
-    position: absolute;
-    transition: left .2s ease;
-    left: calc(100% - 25px);
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    pointer-events: none;
-
-    @media (max-width: $mobile-large) {
-        left: calc(100% - 10px);
-    }
 }
 
 .banner__rightside {

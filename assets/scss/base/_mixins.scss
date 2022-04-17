@@ -36,6 +36,22 @@
     font-weight: bold;
     font-size: $button-text;
     cursor: pointer;
+    border: 0;
+    height: 54px;
+
+    @media (max-width: $mobile-large) {
+        height: 38px;
+        font-size: 15px;
+        text-transform: lowercase;
+     }
+
+    &:hover {
+        @media (min-width: $mobile-large + 1px) {
+            background-color: $dark-pink-color;
+            color: $dark-color;
+            transition: 0.3s;
+        }
+    }
 }
 
 @mixin borderButton {
