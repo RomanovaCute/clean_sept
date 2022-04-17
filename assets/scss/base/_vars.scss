@@ -1,0 +1,42 @@
+/* Цвета */
+$blue-color: #22B5BF;
+$dark-color: #323139;
+$white-color: #FFFFFF;
+$dark-pink-color: #E67187;
+$light-pink-color: #F2B4BF;
+$light-gray-color: #F9F9F9;
+
+$text-white: $white-color;
+$text_dark: $dark-color;
+$title_blue: $blue-color;
+$title_dark: $dark-color;
+$button_blue: $blue-color;
+$button_light-pink: $light-pink-color;
+$button_dark-pink: $dark-pink-color;
+$background_color: $light-gray-color;
+
+/* transitions */
+$base-transition: .2s ease;
+
+/* Размеры шрифтов */
+
+/*42px*/ 
+$title: 2.625em;
+
+/*25px*/ 
+$subtitle: 1.5625em;
+$product-name: 1.5625em;
+
+/*15px*/
+$text: 0.9375em; 
+$button-text: 0.9375em;
+$product-price: 0.9375em;
+
+/*Брейкпоинты медиазапроса*/
+$mobile: 376px;
+$mobile-middle: 525px;
+$mobile-large: 767px;
+$tablet: 1024px;
+
+$tabled-padding: 20px;
+$mobile-padding: 15px;

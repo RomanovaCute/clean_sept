@@ -1,0 +1,132 @@
+.productions {
+    margin-bottom: 58px;
+    overflow: hidden;
+
+    @media (max-width: $mobile-large) {           
+        margin-bottom: 38px;
+    }
+
+    .container {
+        @media (max-width: $mobile-large) {           
+            margin-right: -15px;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+
+        span {
+            color: $blue-color;
+        }
+    }
+
+    &-content {      
+        overflow-x: auto; 
+
+        &__inner {           
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            text-align: center;
+
+            @media (max-width: $mobile-large) {           
+                gap: 15px;            
+                width: calc(225px * 3 + 15px * 2);
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        flex-grow: 1;
+
+        @media (max-width: $mobile-large) {
+            gap: 15px;
+            width: 225px;
+            flex-grow: unset;
+        }
+
+        &:hover {
+            &::before { 
+                border-color: $dark-pink-color;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 234px;
+            border: 2px solid $blue-color;
+            border-radius: 10px;
+            top: 65px;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: -1;
+            box-sizing: border-box;
+
+            @media (max-width: $mobile-large) {
+                height: 173px;
+                top: 53px;
+            }
+        }
+
+        &-image {
+            margin-bottom: 30px;
+
+            @media (max-width: $mobile-large) {
+                margin-bottom: 20px;
+            }
+
+            img {
+                @media (max-width: $mobile-large) {
+                   max-height: 135px;
+                }
+            }
+        }
+
+        &-info {
+            margin-bottom: 30px;
+
+            @media (max-width: $mobile-large) {
+                margin-bottom: 20px;
+            }
+
+            &-title {
+                font-size: 25px;
+                line-height: 30px;
+                margin-bottom: 8px;
+
+                @media (max-width: $mobile-large) {
+                    font-size: 15px;
+                    line-height: 18px;
+                    font-weight: 600;
+                }
+            }
+
+            &-price {
+                font-size: 15px;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &-order {
+
+            button {
+                @include blueButton;
+                width: 182px;
+                margin: 0 auto;
+
+                @media (max-width: $mobile-large) {
+                    width: 100px;
+                }
+            }           
+        }
+    }
+}

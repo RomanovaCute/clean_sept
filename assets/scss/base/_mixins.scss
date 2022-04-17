@@ -1,0 +1,125 @@
+/* Необходимо указать padding'и - они для каждой кнопки свои */
+
+@mixin light-pinkButton {
+    display: inline-block;
+    background-color: $button_light-pink;
+    color: $text_dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+    cursor: pointer;
+}
+
+@mixin dark-pinkButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: $button_dark-pink;
+    color: $text_white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+    cursor: pointer;
+
+    /* У этой кнопки есть элемент "капля", которая задается отдельно через ::after */
+}
+
+@mixin blueButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $button_blue;
+    color: $white-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: $button-text;
+    cursor: pointer;
+    border: 0;
+    height: 54px;
+
+    @media (max-width: $mobile-large) {
+        height: 38px;
+        font-size: 15px;
+        text-transform: lowercase;
+     }
+
+    &:hover {
+        @media (min-width: $mobile-large + 1px) {
+            background-color: $dark-pink-color;
+            color: $dark-color;
+            transition: 0.3s;
+        }
+    }
+}
+
+@mixin borderButton {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: $text_dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $button-text;
+    border: 2px solid $dark-pink-color;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: background-color .2s ease, color .2s ease;
+    padding: 0 50px;
+    cursor: pointer;
+
+    @media (max-width: $mobile-large) {
+        padding: 0 16px;
+    }
+
+    &:hover {
+
+        @media (min-width: $mobile-large + 1px) {
+            background-color: $dark-pink-color;
+            color: $white-color;
+    
+            svg {
+                left: calc(100% + 15px);
+            }
+        }
+    }
+
+    svg {
+        position: absolute;
+        transition: left .2s ease;
+        left: calc(100% - 25px);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        pointer-events: none;
+
+        @media (max-width: $mobile-large) {
+            left: calc(100% - 10px);
+        }
+    }
+
+    /* У этой кнопки есть элемент "капля" и "стрелка", которая задается отдельно через ::after */
+}
+
+@mixin drop {    
+    content: '';
+    position: absolute;
+    background: url('../images/drop.svg') no-repeat;
+    width: 14px;
+    height: 22px;
+    left: -8px;
+    bottom: -11px;    
+}
+
+@mixin input {
+    font-size: $text;
+    font-family: $base-font;
+    border: 2px solid #B0B0B0;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+    // padding: 17.31px 300.92px auto 21.58px;
+}
