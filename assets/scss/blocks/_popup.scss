@@ -6,6 +6,10 @@
     height: 388vh;
     background: rgba(50, 49, 57, 0.21);
     z-index: 1;
+
+    @media (max-width: 376px){
+        height: 360vh;
+    }
 }
 
 .hidden{
