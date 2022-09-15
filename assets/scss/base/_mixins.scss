@@ -121,7 +121,11 @@
     box-sizing: border-box;
     outline: none;
     margin-bottom: 15px;
-    // padding: 17.31px 300.92px auto 21.58px;
+
+    @media(max-width: $mobile){
+        height: 50px;
+        width: 100%;
+    }
 }
 
 @mixin universBtn {

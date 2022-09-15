@@ -920,9 +920,16 @@ h1 {
   }
 }
 
-.feedback-map img {
-  width: 100%;
-  max-height: 100%;
+.feedback-map #map {
+  width: 651px;
+  height: 528px;
+}
+
+@media (max-width: 376px) {
+  .feedback-map #map {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .feedback-map p {
@@ -978,6 +985,13 @@ h1 {
   padding-left: 22px;
 }
 
+@media (max-width: 376px) {
+  .feedback-forms input {
+    height: 50px;
+    width: 100%;
+  }
+}
+
 .feedback-forms textarea {
   height: 110px;
   font-size: 0.9375em;
@@ -989,6 +1003,13 @@ h1 {
   margin-bottom: 15px;
   padding-left: 22px;
   padding-top: 17.31px;
+}
+
+@media (max-width: 376px) {
+  .feedback-forms textarea {
+    height: 50px;
+    width: 100%;
+  }
 }
 
 .feedback-button button {
@@ -1669,6 +1690,13 @@ h1 {
           transform: translate(-50%, -50%);
 }
 
+@media (max-width: 376px) {
+  .pop {
+    width: 80%;
+    height: 400px;
+  }
+}
+
 .pop .popup_header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1681,10 +1709,22 @@ h1 {
   border-radius: 10px 10px 0 0;
 }
 
+@media (max-width: 376px) {
+  .pop .popup_header img {
+    width: 50%;
+  }
+}
+
 .pop .popup_header .closeBtn {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+@media (max-width: 376px) {
+  .pop .popup_header .closeBtn {
+    width: 50%;
+  }
 }
 
 .pop .popup_main {
@@ -1702,6 +1742,12 @@ h1 {
   border-radius: 0 0 10px 10px;
 }
 
+@media (max-width: 376px) {
+  .pop .popup_main__photo {
+    display: none;
+  }
+}
+
 .pop .popup_main__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1710,6 +1756,12 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 376px) {
+  .pop .popup_main__form {
+    width: 100%;
+  }
 }
 
 .pop .popup_main__form .title {
@@ -1741,6 +1793,13 @@ h1 {
   width: 454px;
   height: 54px;
   padding: 18px;
+}
+
+@media (max-width: 376px) {
+  .pop .popup_main .forms input {
+    height: 50px;
+    width: 100%;
+  }
 }
 
 .pop .popup_main .forms input :not(:last-child) {
