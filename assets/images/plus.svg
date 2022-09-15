@@ -1,4 +1,1 @@
-<svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="2" height="30" transform="matrix(-1 0 0 1 16 0.572266)" fill="#E67187"/>
-<rect width="5" height="30" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 30 18.0723)" fill="#E67187"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
