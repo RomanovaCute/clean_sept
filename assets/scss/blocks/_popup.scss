@@ -37,6 +37,14 @@
         background: #F9F9F9;
         border-radius: 10px 10px 0 0;
 
+        @media (max-width: 376px){
+            align-items: center;
+        }
+
+        .logo{
+            padding-left: 10px;
+        }
+
         img{
             @media (max-width: 376px){
                 width: 50%;
