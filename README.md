@@ -8,4 +8,5 @@
 - HTML
 - SCSS
 - JavaScript + библиотека Swiper
+- API Yandex.maps
 
