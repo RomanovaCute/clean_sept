@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/scss/main.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
     <script src="ymapsml_simpleobject.js" type="text/javascript"></script>
 </head>
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <div class="productions__item-order">
-                            <button>Заказать</button>
+                            <button class="order-button">Заказать</button>
                         </div>
                     </div>
                     <div class="productions__item">
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div class="productions__item-order">
-                            <button>Заказать</button>
+                            <button class="order-button">Заказать</button>
                         </div>
                     </div>
                     <div class="productions__item">
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="productions__item-order">
-                            <button>Заказать</button>
+                            <button class="order-button">Заказать</button>
                         </div>
                     </div>
                 </div>
@@ -410,6 +410,67 @@
             </ul>
         </div>
     </div>
+
+    <div class="popup-body hidden">
+        <div class="pop">
+        <div class="popup_header">
+            <div class="logo">
+                <img src="/assets/images/logo.svg" alt="logo"/>
+            </div>
+            <svg class="cross_black" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="2"  height="18.2199" transform="matrix(-1 0 0 1 10.3994 0.137497)" fill="#323139"/>
+                <rect width="5" height="18.2199" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 18.5088 11.7475)" fill="#323139"/>
+                </svg>
+            <svg class="square_blue" width="73" height="42" viewBox="0 0 73 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="26.3416" y="-1.77652" width="56.2249" height="56.2249" rx="9" transform="rotate(30 26.3416 -1.77652)" stroke="#22B5BF" stroke-width="2"/>
+                </svg>
+            <svg class="cross_blue" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="2" height="18.2199" transform="matrix(-1 0 0 1 10.9795 0.405876)" fill="#22B5BF"/>
+                <rect width="5" height="18.2199" transform="matrix(1.19249e-08 -1 -1 -1.19249e-08 19.0889 12.0158)" fill="#22B5BF"/>
+                </svg>
+            <svg class="square_black" width="46" height="24" viewBox="0 0 46 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="-0.237193" y="-14.0956" width="39.4747" height="39.4747" rx="9" transform="rotate(-12.1886 -0.237193 -14.0956)" stroke="#323139" stroke-width="2"/>
+                </svg>
+            <button class="closeBtn">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="2" height="44.87" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 34.5771 3.20059)" fill="#E67187"/>
+                    <rect width="5" height="44.87" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 32.1025 35.9892)" fill="#E67187"/>
+                    </svg>
+            </button>
+        </div>
+        <div class="popup_main">
+            <div class="popup_main__photo">
+                <img src="./assets/images/bottle.jpg" alt="product" />
+            </div>
+            <div class="popup_main__form">
+                <div class="title">
+                    <h2>Антисептик, 1 литр</h2>
+                </div>
+                <div class="forms">
+                    <input type="text" name="name" placeholder="Ваше имя" />
+                    <input type="number" name="phone" placeholder="+7 (999) 999 - 99 - 99"/>
+                    <input type="email" name="e-mail" placeholder="Ваша почта"/>
+                </div>
+                <div class="number">
+                    <h3>Количество:</h3>
+                    <div class="button">
+                        <button class="button_minus">
+                            <img src="./assets/images/minus.svg">
+                        </button>
+                        <span class="count">1 шт.</span>
+                        <button class="button_plus">
+                            <img src="./assets/images/plus.svg"
+                        </button>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button class="submit-btn">Отправить</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/map.js"></script>

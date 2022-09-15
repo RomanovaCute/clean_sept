@@ -123,3 +123,9 @@
     margin-bottom: 15px;
     // padding: 17.31px 300.92px auto 21.58px;
 }
+
+@mixin universBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

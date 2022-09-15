@@ -1,0 +1,115 @@
+.popup-body{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 388vh;
+    background: rgba(50, 49, 57, 0.21);
+    z-index: 1;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.pop{
+    width: 629px;
+    display: flex;
+    height: 480px;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #22B5BF;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    .popup_header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background: #F9F9F9;
+        border-radius: 10px 10px 0 0;
+
+        .closeBtn{
+            @include universBtn;
+        }
+    }
+
+    .popup_main{
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        gap: 30px;
+        height: 100%;
+        background: white;
+        border-radius: 0 0 10px 10px;
+
+        &__form{
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                margin-bottom: 24px;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 30px;
+                color: $dark-color;
+            }
+        }
+
+        .forms{
+            display: flex;
+            flex-direction: column;
+
+            input{
+               @include input;
+               width: 454px;
+               height: 54px;
+               padding: 18px;
+
+               :not(:last-child){
+                margin-bottom: 15px;
+               }
+            }
+            
+        }
+
+        .number{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 17px;
+
+            h3{
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                color: $dark-color;
+            }
+
+            .button{
+                display: flex;
+                align-items: center;
+
+                .count{
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+                .button_minus, .button_plus{
+                    @include universBtn;
+                }
+            }
+        }
+        
+        
+        .submit-btn{
+            @include blueButton;
+            width: 100%;
+            height: 54.36px;
+        }
+    }
+}
