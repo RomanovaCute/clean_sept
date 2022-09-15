@@ -1634,4 +1634,199 @@ h1 {
     width: 100px;
   }
 }
+
+.popup-body {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 388vh;
+  background: rgba(50, 49, 57, 0.21);
+  z-index: 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.pop {
+  width: 629px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 480px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  border: 2px solid #22B5BF;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pop .popup_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #F9F9F9;
+  border-radius: 10px 10px 0 0;
+}
+
+.pop .popup_header .closeBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pop .popup_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 30px;
+  gap: 30px;
+  height: 100%;
+  background: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.pop .popup_main__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pop .popup_main__form .title {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #323139;
+}
+
+.pop .popup_main .forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pop .popup_main .forms input {
+  font-size: 0.9375em;
+  font-family: "Rubik", sans-serif;
+  border: 2px solid #B0B0B0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  margin-bottom: 15px;
+  width: 454px;
+  height: 54px;
+  padding: 18px;
+}
+
+.pop .popup_main .forms input :not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.pop .popup_main .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.pop .popup_main .number h3 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #323139;
+}
+
+.pop .popup_main .number .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pop .popup_main .number .button .count {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.pop .popup_main .number .button .button_minus, .pop .popup_main .number .button .button_plus {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pop .popup_main .submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #22B5BF;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9375em;
+  cursor: pointer;
+  border: 0;
+  height: 54px;
+  width: 100%;
+  height: 54.36px;
+}
+
+@media (max-width: 767px) {
+  .pop .popup_main .submit-btn {
+    height: 38px;
+    font-size: 15px;
+    text-transform: lowercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .pop .popup_main .submit-btn:hover {
+    background-color: #E67187;
+    color: #323139;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
 /*# sourceMappingURL=main.css.map */

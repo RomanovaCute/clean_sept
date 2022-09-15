@@ -1,5 +1,37 @@
 let swiper;
 const sliderWrapper = document.querySelector('.documents-slider');
+const orderBtn = document.querySelectorAll('.order-button'),
+    popUp = document.querySelector('.popup-body'),
+    closePopupBtn = document.querySelector('.closeBtn'),
+    increaseBtn = document.querySelector('.button_plus'),
+    decreaseBtn = document.querySelector('.button_minus'),
+    countArea = document.querySelector('.count');
+
+
+orderBtn.forEach(item => {
+  item.addEventListener('click', () => {
+    popUp.classList.toggle('hidden')
+    document.body.style.overflow = "hidden"
+  })
+})
+
+closePopupBtn.addEventListener('click', () => {
+  popUp.classList.toggle('hidden')
+  document.body.style.overflow = ""
+})
+
+let count = 1;
+increaseBtn.addEventListener('click', () => {
+  count += 1
+  countArea.innerHTML = `${count} шт.`
+})
+
+decreaseBtn.addEventListener('click', () => {
+  if(count > 0){
+    count = count - 1;
+    countArea.innerHTML = `${count} шт.`
+  } return;
+})
 
 document.addEventListener('DOMContentLoaded', () => {
   swiper = new Swiper('.documents-slider .swiper', {
@@ -81,6 +113,6 @@ menuLinks.forEach(link => {
       behavior: 'smooth',
       block: 'start'
     });
-
   })
 })
+
